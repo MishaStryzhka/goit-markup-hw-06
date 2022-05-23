@@ -10,6 +10,8 @@
 
     --primary-bg-color: #2F303A;
     --secondary-bg-color: #f5f4fA;
+
+    --primary-icon-color: #AFB1B8;
 }
 
 /* body */
@@ -144,20 +146,29 @@ header {
 }
 
 .contact-nav .link {
-    display: block;
+    display: inline-flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
 
     color: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
 }
 
 .contact-nav .link:hover,
 .contact-nav .link:focus {
     color: var(--primary-site-color);
+    fill: var(--primary-site-color);
 }
 
+.contact-nav .item {
+    display: inline-flex;
+    align-items: center;
+}
 
-
+.contact-nav .icon {
+    margin-right: 10px;
+}
 
 
 
@@ -222,6 +233,17 @@ header {
 
 .benefits .item:not(:nth-last-child(-n + 4)) {
     margin-bottom: 10px;
+}
+
+.benefits .box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 4px;
 }
 
 .benefits .title {
@@ -314,6 +336,7 @@ header {
 
 .list .profession {
     margin: 0;
+    margin-bottom: 16px;
 
     color: var(--secondary-text-color);
     font-size: 16px;
@@ -321,10 +344,63 @@ header {
 
 }
 
+.team .list-icon {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
+.team .link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--primary-white-color);
+    border-radius: 50%;
+    fill: var(--primary-icon-color);
+}
 
+.team .link-icon:hover {
+    background-color: var(--primary-site-color);
+    fill: var(--primary-white-color);
+}
 
+.team .item-icon:not(:last-child) {
+    margin-right: 10px;
+}
 
+/* Постоянные клиенты */
+
+.clients .list-icon {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.clients .link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    background-color: var(--primary-white-color);
+    border: 1px solid var(--primary-icon-color);
+    border-radius: 4px;
+    fill: var(--primary-icon-color);
+}
+
+.link-icon:hover {
+    border: 1px solid var(--primary-site-color);
+    fill: var(--primary-site-color);
+
+}
+
+.clients .item-icon:not(:last-child) {
+    margin-right: 30px;
+}
 
 /* PORTFOLIO */
 
@@ -375,6 +451,7 @@ header {
     color: var(--primary-white-color);
     background-color: var(--primary-site-color);
     cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -433,6 +510,10 @@ header {
     line-height: 1.87;
 }
 
+.projects-list .item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 
 
 
@@ -448,6 +529,10 @@ header {
     line-height: 1.71;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer .container {
+    display: inline-flex;
 }
 
 .footer .list {
@@ -477,4 +562,54 @@ header {
 
 .footer .item:not(:last-child) {
     margin-bottom: 9px;
+}
+
+/* присоединяйтесь */
+
+.footer .main-bloc {
+    margin-right: 70px;
+}
+
+.footer .list-icon {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    ;
+    border-radius: 50%;
+    fill: var(--primary-white-color);
+}
+
+.footer .link-icon:hover {
+    background-color: var(--primary-site-color);
+    fill: var(--primary-white-color);
+}
+
+.footer .item-icon:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer .bloc-title {
+    margin: 0;
+    margin-bottom: 20px;
+
+    color: var(--primary-white-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.footer .bloc {
+    margin-top: 12px;
 }
