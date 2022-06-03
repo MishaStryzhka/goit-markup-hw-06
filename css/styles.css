@@ -520,6 +520,38 @@ header {
     text-decoration: none;
 }
 
+.projects-thumb {
+    overflow: hidden;
+    position: relative;
+}
+
+.projects .overlay {
+    background-color: rgba(33, 150, 243, 0.9);
+    ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 63px 24px;
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+}
+
+.projects .link:hover .overlay {
+    transform: translateY(0%);
+}
+
+.projects .podtext {
+    color: var(--primary-white-color);
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
 .projects .text {
     margin-top: 0;
     margin-bottom: 0;
