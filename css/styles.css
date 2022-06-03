@@ -124,6 +124,8 @@ header {
 }
 
 .site-nav .link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -131,8 +133,22 @@ header {
     color: var(--primary-text-color);
 }
 
-.site-nav .link.current {
-    color: var(--primary-site-color)
+.site-nav .item {
+    position: relative;
+}
+
+.site-nav .link.current::after {
+    position: absolute;
+    display: inline-block;
+
+
+    content: '';
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-site-color);
+    border-radius: 2px;
 }
 
 .site-nav .link:hover,
@@ -146,6 +162,9 @@ header {
 }
 
 .contact-nav .link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: inline-flex;
     align-items: center;
     padding-top: 32px;
@@ -207,6 +226,9 @@ header {
 }
 
 .hero .button {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: inline-block;
     border-radius: 4px;
     padding: 10px 32px;
@@ -393,6 +415,9 @@ header {
 }
 
 .team .link-icon {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -422,6 +447,9 @@ header {
 }
 
 .clients .link-icon {
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -461,7 +489,11 @@ header {
     margin-bottom: 50px;
 }
 
-.button {
+.projects .button {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: inline-block;
     border-radius: 4px;
     padding: 6px 22px;
@@ -586,6 +618,8 @@ header {
 }
 
 .projects .link {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: inline-block;
 }
 
@@ -633,6 +667,8 @@ header {
 }
 
 .contacts {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -659,13 +695,16 @@ header {
 }
 
 .footer .link-icon {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
     background-color: rgba(255, 255, 255, 0.1);
-    ;
+
     border-radius: 50%;
     fill: var(--primary-white-color);
 }
