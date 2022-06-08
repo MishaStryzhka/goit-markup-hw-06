@@ -544,15 +544,28 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    color: #000000;
+}
+
+.icon-close{ 
+    fill: currentColor;
+}
+
+.backdrop .button-close:hover{
+    color: var(--primary-site-color);
 }
 
 .modal .form {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 40px 39px 40px 41px;
 }
 
 .form .title {
+    display: block;
 
-    margin: 0;
     margin-bottom: 12px;
 
     color: var(--primary-text-color);
@@ -572,7 +585,7 @@ header {
 }
 
 .modal .form .label {
-    padding-bottom: 4px;
+    margin-bottom: 4px;
 
     font-weight: 400;
     font-size: 12px;
@@ -595,6 +608,9 @@ header {
     outline: 1px solid var(--primary-site-color);
 }
 
+.input:focus-visible + .icon{
+    fill: var(--primary-site-color);
+}
 .form .comment {
     width: 448px;
     height: 120px;
@@ -612,6 +628,8 @@ header {
 
     left: 12px;
     bottom: 11px;
+
+
 }
 
 .form .comment::placeholder {
@@ -623,9 +641,23 @@ header {
     color: rgba(117, 117, 117, 0.5);
 }
 
+
+.form .label-checkbox{
+    position: relative;
+    padding-left: 25px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    
+    color: var(--secondary-text-color);
+}
+
 .form .form-checkbox {
-    margin: 20px auto 30px auto;
-    display: inline-flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -640,38 +672,23 @@ header {
     overflow: hidden;
 }
 
-.form .checkbox-icon {
-    margin-right: 8px;
+.form .icon-check{
+    position: absolute;
 
-    width: 16px;
-    height: 15px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-25px);
+
 }
 
-.form .checkbox-icon-check {
+.form .icon-check.tick {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    position: absolute;
-    width: 16px;
-    height: 15px;
-
     opacity: 0;
 }
 
-.form .checkbox:checked~.checkbox-icon-check {
+.form .checkbox:checked~.icon-check.tick {
     opacity: 1;
 }
 
-.form .form-checkbox:hover .checkbox-qwe {
-    border-color: var(--primary-site-color);
-}
-
-.form .label-checkbox {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-
-    color: var(--secondary-text-color);
-}
 
 .form .link-checkbox {
     color: var(--primary-site-color);
@@ -889,7 +906,8 @@ header {
 }
 
 .footer .box {
-    display: inline-flex;
+    display: flex;
+    align-items: baseline;
 }
 
 .footer .list {
@@ -973,10 +991,6 @@ header {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-}
-
-.footer .bloc {
-    margin-top: 12px;
 }
 
 /* Подпишитесь */
